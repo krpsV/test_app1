@@ -8,4 +8,10 @@ app.get('/',(req,res)=>{
 app.get('/index',(req,res)=>{
     res.render('index.ejs');
 })
+let count=0;
+app.get('/app1',(req,res)=>{
+    res.render('app1.ejs');
+    console.log(req);
+    console.log("count:"+count++);
+})
 app.listen(3000);
